@@ -1,0 +1,300 @@
+* {
+  Margin: 0;
+  padding: 0; }
+
+body {
+  background-color: white; }
+
+.h1__khiels {
+  text-align: center;
+  font-size: 0; }
+
+h2 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  font-size: 24px;
+  padding: 10px 0px; }
+
+h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  text-align: left;
+  color: black;
+  font-size: 18px;
+  padding: 10px 0px; }
+
+h4 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  text-align: left;
+  color: black;
+  font-size: 32px; }
+
+.e404 {
+  padding: 10%; }
+
+@media only screen and (max-width: 600px) {
+  h2 {
+    font-size: 0,5em; }
+  h3 {
+    font-size: 0,5em; }
+  h4 {
+    font-size: 0,5em; } }
+
+#logo {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  height: auto; }
+
+.navbar {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold; }
+
+@media only screen and (max-width: 600px) {
+  .productosHome {
+    padding-left: 10%;
+    padding-right: 5%; } }
+
+.btn {
+  background-color: black;
+  color: white;
+  border-color: black; }
+
+.btn:hover {
+  background-color: white;
+  color: black;
+  border-color: white; }
+
+.subtitulo__home {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  text-transform: uppercase; }
+
+.formulario {
+  margin: 30px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: black;
+  text-align: justify; }
+  .formulario .formuario__main {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto; }
+  .formulario .formulario__titulo--uppercase {
+    text-transform: uppercase;
+    padding: 10px; }
+  .formulario formulario__mail {
+    width: 500px; }
+  .formulario .formulario__enviar {
+    background-color: black;
+    color: white;
+    border-color: white;
+    justify-content: center; }
+  .formulario .formulario__enviar:hover {
+    background-color: white;
+    color: black;
+    border-color: black; }
+
+footer {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  background-color: black; }
+  footer a {
+    text-decoration: none;
+    color: white; }
+  footer a:hover {
+    color: white; }
+  footer .footerPadre {
+    display: grid;
+    grid-template-areas: "sobreNosotros productos ayuda" "sobreNosotros productos ayuda" "sobreNosotros productos ayuda";
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-row-gap: 1px;
+    grid-column-gap: 1px;
+    justify-items: center;
+    align-items: center;
+    height: 10vh;
+    font-size: 12px;
+    text-decoration: none;
+    text-align: center; }
+  footer .footerPadre___sobreNosotros {
+    grid-area: sobreNosotros;
+    align-items: auto;
+    justify-items: center; }
+  footer .footerPadre___productos {
+    grid-area: productos;
+    align-items: auto;
+    justify-items: center; }
+  footer .footerPadre___ayuda {
+    grid-area: ayuda; }
+  footer .footerPadre___redes {
+    width: 50px;
+    margin: auto;
+    display: inline-block;
+    height: auto;
+    padding: 10px; }
+  footer .footerPadre___redes:hover {
+    padding: 10px;
+    transition: 700ms;
+    transform: scale(2); }
+  footer .footerPadre___desarrollador {
+    padding: 20px 20px; }
+  @media only screen and (max-width: 600px) {
+    footer .footerPadre {
+      font-size: 0px, 3;
+      font-weight: lighter;
+      display: grid;
+      grid-template-areas: "sobreNosotros" "productos" "ayuda"; }
+    footer .footerPadre___redes {
+      width: 35px; } }
+
+.acercade {
+  font-family: "Open Sans", sans-serif;
+  text-align: justify;
+  font-size: 14px;
+  color: black;
+  line-height: 2;
+  margin: 5px 30px;
+  padding: 1% 10%; }
+
+.acercade__contenidoSobreNosotros--bold {
+  font-weight: bold;
+  padding: 1% 0%; }
+
+.box {
+  margin: auto;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  padding: 2%; }
+
+.productos {
+  display: grid;
+  grid-template-areas: "foto1 foto2" "titulo1 titulo2" "foto3 foto4" "titulo3 titulo4";
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  grid-row-gap: 1px;
+  grid-column-gap: 1px;
+  justify-items: center;
+  align-items: center;
+  font-size: 12px;
+  text-decoration: none;
+  text-align: center; }
+
+.productos__foto1 {
+  grid-area: foto1;
+  align-items: center;
+  justify-items: center; }
+
+.productos__foto2 {
+  grid-area: foto2;
+  align-items: auto;
+  justify-items: center; }
+
+.productos__foto3 {
+  grid-area: foto3;
+  align-items: auto;
+  justify-items: center; }
+
+.productos__foto4 {
+  grid-area: foto4;
+  align-items: auto;
+  justify-items: center; }
+
+.productos__titulo1 {
+  grid-area: titulo1;
+  align-items: auto;
+  justify-items: center; }
+
+.productos__titulo2 {
+  grid-area: titulo2;
+  align-items: auto;
+  justify-items: center; }
+
+.productos__titulo3 {
+  grid-area: titulo3;
+  align-items: auto;
+  justify-items: center; }
+
+.productos__titulo4 {
+  grid-area: titulo4;
+  align-items: auto;
+  justify-items: center; }
+
+a {
+  text-decoration: none; }
+
+.productos__titulo {
+  padding: 8% 10%;
+  font-size: 48px;
+  text-transform: uppercase;
+  background-image: url(https://www.kiehls.es/dw/image/v2/AAQP_PRD/on/demandware.static/-/Sites-kiehls-es-Library/default/dw694f1518/images/plp/cover/category-view-all-skincare-desk.jpg?sw=2000&q=70); }
+
+@media only screen and (max-width: 600px) {
+  .productos {
+    font-size: 0,5em;
+    grid-template-areas: "foto1" "titulo1" "foto2" "titulo2" "foto3" "titulo3" "foto4" "titulo4"; }
+  .productos__titulo {
+    font-size: 1em; } }
+
+.boxProductPage {
+  margin: auto;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  padding: 1% 15% 3% 10%; }
+
+.paginaProducto {
+  display: grid;
+  grid-template-areas: "foto titulo" "foto precio" "desc desc";
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  grid-row-gap: 1px;
+  grid-column-gap: 1px;
+  justify-items: center;
+  align-items: center;
+  font-size: 12px;
+  text-decoration: none;
+  text-align: center; }
+
+.paginaProducto__foto {
+  grid-area: foto;
+  align-items: center;
+  justify-items: center; }
+
+.paginaProducto__titulo {
+  grid-area: titulo;
+  align-items: auto;
+  justify-items: center; }
+
+.paginaProducto__precio {
+  grid-area: precio;
+  align-items: auto;
+  justify-items: center;
+  font-size: 18px; }
+
+.paginaProducto__descripcion {
+  grid-area: desc;
+  text-align: left; }
+
+@media only screen and (max-width: 600px) {
+  .paginaProducto {
+    font-size: 0,5em;
+    grid-template-areas: "foto" "titulo" "precio" "desc";
+    justify-content: center; }
+  .paginaProducto__titulo {
+    padding: 20%; }
+  .paginaProducto__descripcion {
+    padding: 20%; } }
