@@ -98,6 +98,9 @@ function agregarAlCarrito(prodId){ //recibe el id de producto y lo busca en el a
   mostrarCarrito()
 }    
 
+let totalOrden = carrito.reduce(
+  (acumulador, el) => (acumulador += el.precio), 0);
+console.log(totalOrden);
 
 const tableBody = document.getElementById('tabla-carrito')
 
@@ -144,6 +147,7 @@ cerrarCarrito.addEventListener('click',()=>{
   vaciarCarrito.classList.add("ocultar")
 
 })
+
 
 
 
