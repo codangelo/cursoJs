@@ -90,6 +90,8 @@ productos.forEach((producto) => {
   contenedor.appendChild(div);
 });
 
+//carrito
+
 const carrito = []
 
 function agregarAlCarrito(prodId){ //recibe el id de producto y lo busca en el array
@@ -98,11 +100,19 @@ function agregarAlCarrito(prodId){ //recibe el id de producto y lo busca en el a
   mostrarCarrito()
 }    
 
+//subtotal
+
 let totalOrden = carrito.reduce(
   (acumulador, el) => (acumulador += el.precio), 0);
-console.log(totalOrden);
 
-const tableBody = document.getElementById('tabla-carrito')
+  const totalCarrito = document.getElementById('modalTotal')
+
+  totalCarrito.innerText = "Precio total $" + totalOrden
+
+
+//Carrito tabla
+
+const tableBody = document.getElementById('modalCarritoContent')
 
 const mostrarCarrito = () => {
 
@@ -115,7 +125,7 @@ const mostrarCarrito = () => {
   tr.innerHTML = `
       <th scope="row"><img src=${prod.img} class="fotoCarrito" alt="..."></th>
       <td>${prod.nombre}</td>
-      <td>${prod.precio}</td>
+      <td>$${prod.precio}</td>
       
   `;
 
@@ -123,31 +133,57 @@ const mostrarCarrito = () => {
 })
 }
 
-const verCarrito = document.getElementById("verCarrito")
-const tablaCarrito = document.getElementById("tablaCarrito")
-const cerrarCarrito = document.getElementById("cerrarCarrito")
-const vaciarCarrito = document.getElementById("vaciarCarrito")
+//carrito botones
 
+const vaciarCarrito = document.getElementById("modalVaciarCarrito")
 
-verCarrito.addEventListener('click',()=>{
-  tablaCarrito.classList.remove("ocultar")
-  cerrarCarrito.classList.remove("ocultar")
-  vaciarCarrito.classList.remove("ocultar")
-
-})
 
 
 vaciarCarrito.addEventListener('click', function(){
-  tableBody.innerHTML = ""
+  carrito.splice(0,carrito.length)
+  mostrarCarrito()
 })
 
-cerrarCarrito.addEventListener('click',()=>{
-  tablaCarrito.classList.add("ocultar")
-  cerrarCarrito.classList.add("ocultar")
-  vaciarCarrito.classList.add("ocultar")
+const modalAbrirCarrito = document.getElementById('modalAbrirCarrito')
+const modalCerrarCarrito = document.getElementById('modalCerrarCarrito')
+const modalContainerCarrito = document.getElementById('modalCarrito') 
 
+
+const abrirModalCarrito = () => {
+    modalContainerCarrito.classList.toggle('modal-active')
+}
+modalAbrirCarrito.addEventListener('click', abrirModalCarrito)
+modalCerrarCarrito.addEventListener('click', abrirModalCarrito)
+modalContainerCarrito.addEventListener('click', abrirModalCarrito)
+  
+const modalCarrito = document.getElementById('modalCart')
+
+modalCarrito.addEventListener('click', (e) => {
+    e.stopPropagation()
 })
 
 
 
+
+
+//Registro
+
+
+const registroAbrir = document.getElementById('modalAbrir')
+const registroCerrar = document.getElementById('modalCerrar')
+const modalContainer = document.getElementById('modalContainer') 
+
+
+const abrirModal = () => {
+    modalContainer.classList.toggle('modal-active')
+}
+registroAbrir.addEventListener('click', abrirModal)
+registroCerrar.addEventListener('click', abrirModal)
+modalContainer.addEventListener('click', abrirModal)
+
+const modal = document.getElementById('modal')
+
+modal.addEventListener('click', (e) => {
+    e.stopPropagation()
+})
 
