@@ -4,70 +4,70 @@ let productos = [
     nombre: "Master Origins Colombia",
     descripcion: "AFRUTADO Y VIBRANTE",
     precio: 1000,
-    img: "../images/col.png"
+    img: "images/col.png"
   },
   {
     id: 2,
     nombre: "Nicaragua La Cumplida",
     descripcion: "AFRUTADO Y DULCE",
     precio: 2000,
-    img: "../images/nic.png"
+    img: "images/nic.png"
   },
   {
     id: 3,
     nombre: "Vanilla Éclair",
     descripcion: "VANILLA",
     precio: 1100,
-    img: "../images/vanila.png"
+    img: "images/vanila.png"
   },
   {
     id: 4,
     nombre: "Master Origins India",
     descripcion: "INTENSO Y ESPECIADO",
     precio: 1500,
-    img: "../images/india.png"
+    img: "images/india.png"
   },
   {
     id: 5,
     nombre: "Master Origins Indonesia",
     descripcion: "SABROSO Y AMADERADO",
     precio: 1500,
-    img: "../images/ind.png"
+    img: "images/ind.png"
   },
   {
       id: 6,
       nombre: "Buenos Aires Lungo",
       descripcion: "CEREALES Y CARAMELO",
       precio: 1499,
-      img: "../images/bl.png"
+      img: "images/bl.png"
     },
     {
       id: 7,
       nombre: "Tokyo Vivalto Lungo",
       descripcion: "FLORAL Y TOSTADO",
       precio: 1200,
-      img: "../images/tokio.jpg"
+      img: "images/tokio.jpg"
     },
     {
       id: 8,
       nombre: "Vienna Linizio Lungo",
       descripcion: "MALTEADO, CEREALES",
       precio: 1350,
-      img: "../images/viena.png"
+      img: "images/viena.png"
     },
     {
       id: 9,
       nombre: "Shanghai Lungo",
       descripcion: "CÍTRICOS Y AFRUTADO",
       precio: 1499,
-      img: "../images/shangai.png"
+      img: "images/shangai.png"
     },
     {
       id: 10,
       nombre: "Stockholm Fortissio Lungo",
       descripcion: "TOSTADO Y MALTEADO",
       precio: 1500,
-      img: "../images/stk.png"
+      img: "images/stk.png"
     },
 ];
 
@@ -168,6 +168,8 @@ modalCarrito.addEventListener('click', (e) => {
 
 //Registro
 
+
+$('body').append("<p><h2>¡Hola Coder!</h2></p>");
 
 const registroAbrir = document.getElementById('modalAbrir')
 const registroCerrar = document.getElementById('modalCerrar')
