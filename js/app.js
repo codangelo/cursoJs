@@ -169,8 +169,6 @@ modalCarrito.addEventListener('click', (e) => {
 //Registro
 
 
-$('body').append("<p><h2>¡Hola Coder!</h2></p>");
-
 const registroAbrir = document.getElementById('modalAbrir')
 const registroCerrar = document.getElementById('modalCerrar')
 const modalContainer = document.getElementById('modalContainer') 
@@ -189,3 +187,17 @@ modal.addEventListener('click', (e) => {
     e.stopPropagation()
 })
 
+$('.tituloHome')
+    .animate({
+        "opacity": "1",
+        "font-size": "80px"
+    }, 1000)
+    .animate({
+        "font-size": "24px"
+    }, 1000)
+    .slideUp(300)
+    .delay(1000)
+    .slideDown(200)
+    .delay(1000)
+
+    
