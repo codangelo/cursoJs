@@ -187,7 +187,7 @@ modal.addEventListener('click', (e) => {
     e.stopPropagation()
 })
 
-$('.tituloHome')
+$('.animacion')
     .animate({
         "opacity": "1",
         "font-size": "80px"
@@ -199,5 +199,5 @@ $('.tituloHome')
     .delay(1000)
     .slideDown(200)
     .delay(1000)
-
-    
+  
+  
