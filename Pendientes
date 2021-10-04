@@ -1,0 +1,25 @@
+JS:
+
+Levantar datos de un array (Json)
+
+Logica carrito:
+
+Agregar boton eliminar y sumar cantidad al carrito
+Agregar integraciòn api mp
+
+Cambiar nombre del archivo js a main.js o index.js
+
+ver to fixed
+
+Caso web:
+Ver si dejo el console log de error.
+
+
+Tabla carrito 
+
+Crear row con encabezado
+
+
+prod= item
+prodCarrito = Miitem
+unidadesProd =numeroUnidadesItem

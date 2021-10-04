@@ -9,4 +9,5 @@
     { "id": 8, "nombre": "Vienna Linizio Lungo", "descripcion": "MALTEADO, CEREALES", "precio": 1350, "img": "images/viena.png"},
     { "id": 9, "nombre": "Shanghai Lungo", "descripcion": "CÍTRICOS Y AFRUTADO", "precio": 1499, "img": "images/shangai.png"},
     { "id": 10, "nombre": "Stockholm Fortissio Lungo", "descripcion": "TOSTADO Y MALTEADO", "precio": 1500, "img": "images/stk.png"}
+    
 ]

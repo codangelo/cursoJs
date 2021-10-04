@@ -1,127 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proyecto final</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script defer src="JS/app.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/nuevo.js"></script>
 
 
-  </head>
-  <body>
-    <header>
-      <h1 class="tituloHome animacion">Tienda Nespresso</h1>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"
-            ><img src="images/logo.png" class="logo" alt="Nespresso"
-          /></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul id="contenedorNav" class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <button id="modalAbrir" class="nav-link btn-light">
-                  Registro
-                </button>
-              </li>
-              <li class="nav-item">
-                <button id="modalAbrirCarrito" class="nav-link btn-light">
-                  Carrito
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <div id="modalContainer" class="modalContainer">
-      <div id="modal">
-        <h3 class="formularioTitulo">Registro</h3>
-        <hr />
-        <div id="modalContent">
-          <section class="formulario">
-            <form class="formuarioMain">
-              <div class="formularioNombre">
-                <input
-                  type="text"
-                  name="Nombre y Apellido"
-                  placeholder="Nombre y Apellido"
-                  maxlength="500"
-                  required
-                />
-              </div>
-              <div class="formularioMail">
-                <input type="email" name="Mail" placeholder="Mail" required />
-              </div>
-              <div class="formularioPass">
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="Password"
-                  required
-                />
-              </div>
-            </form>
-          </section>
-        </div>
-        <div class="formularioBtn">
-          <button id="modalRegistro" class="btn btn-outline-secondary">
-            Registrarse
-          </button>
-        </div>
-        <div class="formularioBtn">
-          <button id="modalCerrar" class="btn btn-outline-danger">
-            Cerrar
-          </button>
+</head>
+<body>
+  <header>
+    <h1 class="tituloHome animacion">Tienda Nespresso</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><img src="images/logo.png" class="logo" alt="Nespresso"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul id="contenedorNav" class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <button id="modalAbrir" class="nav-link btn-light">
+                Registro
+              </button>
+            </li>
+            <li class="nav-item">
+              <button id="modalAbrirCarrito" class="nav-link btn-light">
+                Carrito
+              </button>
+            </li>
+          </ul>
         </div>
       </div>
+    </nav>
+  </header>
+
+  <!-- Contenido -->
+  <div class="row">
+    <main id="container" class="col-sm-12 row"></main>
+  </div>
+
+  <!-- Modal Carrito -->
+
+  <div id="modalCarrito" class="modalCarrito">
+    <div id="modalCart" class="row">
+      <h2>Carrito</h2>
+      <ul id="carrito" class="list-group"></ul>
+      <hr>
+      <p class="text-right">Total: <span id="total"></span>&dollar;</p>
+      <button id="boton-vaciar" class="btn btn-danger">vaciar</button>
+      <button id="modalCerrarCarrito" class="btn btn-outline-danger">Cerrar</button>
+
     </div>
+  </div>
 
-    <div id="modalCarrito" class="modalCarrito">
-      <div id="modalCart">
-        <h3>Carrito</h3>
-        <hr />
-        <div id="modalCarritoContent"></div>
-        <div id="modalTotal"></div>
-        <button id="modalVaciarCarrito" class="carrito btn btn-secondary">
-          Vaciar carrito
-        </button>
-        <button id="modalCerrarCarrito" class="btn btn-outline-danger">
-          Cerrar
-        </button>
-      </div>
-    </div>
+    <!-- Modal registro -->
 
-    <div id="contenedor"></div>
 
-  </body>
+  
+</body>
+</html>
 </html>
