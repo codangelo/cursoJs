@@ -1,34 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Tienda Nespresso</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"/>
   <link rel="stylesheet" href="css/style.css" />
-  <script src="js/nuevo.js"></script>
-
-
+  <script defer src="js/app.js"></script>
+  <script defer src="js/registro.js"></script>
 </head>
 <body>
+  <!--Barra de navegación-->
+
   <header>
-    <h1 class="tituloHome animacion">Tienda Nespresso</h1>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"
-          ><img src="images/logo.png" class="logo" alt="Nespresso"
-        /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
+        <a class="navbar-brand" href="#"><img src="images/logo.png" class="logo" alt="Nespresso"/></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul id="contenedorNav" class="navbar-nav">
@@ -36,14 +25,13 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <button id="modalAbrir" class="nav-link btn-light">
-                Registro
-              </button>
+              <button id="modalAbrir" class="nav-link btn-light">Registro</button>
             </li>
             <li class="nav-item">
-              <button id="modalAbrirCarrito" class="nav-link btn-light">
-                Carrito
-              </button>
+              <button id="modalAbrirCarrito" class="nav-link btn-light">Carrito</button>
+            </li>
+            <li class="nav-item">
+              <span id= "notifCarrito"" class="badge rounded-pill bg-danger">0</span>
             </li>
           </ul>
         </div>
@@ -52,28 +40,54 @@
   </header>
 
   <!-- Contenido -->
-  <div class="row">
-    <main id="container" class="col-sm-12 row"></main>
-  </div>
+
+  <main id="contenedorProductos"></main>
 
   <!-- Modal Carrito -->
 
   <div id="modalCarrito" class="modalCarrito">
-    <div id="modalCart" class="row">
+    <div id="modalCart">
       <h2>Carrito</h2>
-      <ul id="carrito" class="list-group"></ul>
+      <div id="contenedorCarrito" class="list-group"></div>
       <hr>
-      <p class="text-right">Total: <span id="total"></span>&dollar;</p>
-      <button id="boton-vaciar" class="btn btn-danger">vaciar</button>
-      <button id="modalCerrarCarrito" class="btn btn-outline-danger">Cerrar</button>
-
+      <h2 class="text-right">Total: $<span id="total"></span></h2>
+      <div class="grid">
+        <button onclick=borrarTodo() type="button" id="modalVaciarCarrito" class="btnCarrito btn btn-outline-danger">Vaciar</button>
+        <button onclick=pagar() type="button" id="modalPagarCarrito" class="btnCarrito btn btn-outline-success">Pagar</button>
+        <button type="button" id="modalCerrarCarrito" class="btnCarrito btn btn-outline-dark">Cerrar</button>
+      </div>
     </div>
   </div>
 
-    <!-- Modal registro -->
+  <!-- Modal registro -->
 
+  <div id="modalContainer" class="modalContainer">
+     <div id="modal">
+       <h3 class="formularioTitulo">Registro</h3>
+       <hr/>
+       <div id="modalContent formulario">
+           <form class="formuarioMain">
+             <div class="formularioNombre">
+               <input id="nombre" type="text" name="Nombre y Apellido" placeholder="Nombre y Apellido" maxlength="500" required/>
+             </div>
+             <div class="formularioMail">
+               <input id="mail" type="email" name="Mail" placeholder="Mail" required />
+             </div>
+             <div class="formularioPass">
+               <input id= "pass" type="password" name="password" placeholder="Password" required/>
+             </div>
+           </form>
+       </div>
+       <div class="formularioBtn">
+         <button id="modalRegistro" class="btn btn-outline-secondary">Registrarse</button>
+       </div>
+       <div class="formularioBtn">
+         <button id="modalCerrar" class="btn btn-outline-danger">Cerrar</button>
+       </div>
+     </div>
+   </div>
 
   
 </body>
 </html>
-</html>
+
