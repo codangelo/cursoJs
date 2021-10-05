@@ -83,7 +83,7 @@ function actualizarCarrito() {
 
 function borrarTodo(){
     carrito.length = 0;
-    localStorage.clear;
+    localStorage.clear();
     actualizarCarrito();
 }
 

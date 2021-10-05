@@ -31,7 +31,7 @@ const guardarRegistro = () => {
   localStorage.setItem("nombre",JSON.stringify(nombre.value));
   localStorage.setItem("mail",JSON.stringify(mail.value));
   localStorage.setItem("pass",JSON.stringify(pass.value));
-  console.log(nombre)
+  abrirRegistro();
 }
 
 registro.addEventListener("click",guardarRegistro);
